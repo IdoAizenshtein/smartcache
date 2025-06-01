@@ -1,0 +1,1 @@
+module.exports = require('./dist/smart-cache.js');

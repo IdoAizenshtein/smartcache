@@ -1,0 +1,32 @@
+{
+  "name": "smartcache",
+  "version": "1.0.0",
+  "description": "A lightweight Service Worker library for automatic caching (GET/HEAD) and offline request queue (POST, PUT, DELETE) via IndexedDB.",
+  "author": "Ido Aizenshtein <idoaizenshtein@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idoaizenshtein/smartcache.git"
+  },
+  "homepage": "https://github.com/idoaizenshtein/smartcache#readme",
+  "main": "index.js",
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "service-worker",
+    "cache",
+    "offline",
+    "indexeddb",
+    "pwa",
+    "smartcache"
+  ],
+  "scripts": {
+    "build": "echo \"(nothing to build; dist/ already contains the final files)\"",
+    "prepublishOnly": "npm test",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}
