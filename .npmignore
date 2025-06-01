@@ -1,0 +1,7 @@
+# Exclude everything except dist/, README.md, LICENSE, and package.json
+*
+!.npmignore
+!LICENSE
+!README.md
+!package.json
+!dist/
