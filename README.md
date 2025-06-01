@@ -132,20 +132,20 @@ Select the integration method that matches your project:
 
 1. **Install SmartCache**
    ```bash
-   npm install smartcache --save
+   npm install smartcache-serviceworker --save
    ```
 
 2. **Copy or Bundle Necessary Files**
     - **Option A: Copy to `public/`**
       ```bash
-      cp node_modules/smartcache/dist/smart-cache.js public/smart-cache.js
-      cp node_modules/smartcache/dist/sw.js public/sw.js
+      cp node_modules/smartcache-serviceworker/dist/smart-cache.js public/smart-cache.js
+      cp node_modules/smartcache-serviceworker/dist/sw.js public/sw.js
       ```
     - **Option B: Import in Your Build**  
       In your main JavaScript entry file (e.g., `src/index.js`):
       ```js
       // Ensure SmartCache script is loaded early
-      import 'smartcache/dist/smart-cache.js';
+      import 'smartcache-serviceworker/dist/smart-cache.js';
  
       // Register Service Worker (sw.js should be served from root)
       if ('serviceWorker' in navigator) {
@@ -170,7 +170,7 @@ Select the integration method that matches your project:
         plugins: [
           new CopyPlugin({
             patterns: [
-              { from: 'node_modules/smartcache/dist/sw.js', to: '' }
+              { from: 'node_modules/smartcache-serviceworker/dist/sw.js', to: '' }
             ]
           })
         ]
@@ -212,9 +212,9 @@ If you installed SmartCache from npm and provided an `index.js` that exports `di
 
 ```js
 // Node or bundler environment:
-const SmartCache = require('smartcache');
+const SmartCache = require('smartcache-serviceworker');
 // or (ESM-aware bundlers):
-import SmartCache from 'smartcache';
+import SmartCache from 'smartcache-serviceworker';
 ```
 
 This works because `index.js` contains:
@@ -233,13 +233,13 @@ For a React application (Create React App or similar), you must place SmartCache
 
 1. **Install SmartCache**
    ```bash
-   npm install smartcache --save
+   npm install smartcache-serviceworker --save
    ```
 
 2. **Copy Files to `public/`**
    ```bash
-   cp node_modules/smartcache/dist/smart-cache.js public/smart-cache.js
-   cp node_modules/smartcache/dist/sw.js public/sw.js
+   cp node_modules/smartcache-serviceworker/dist/smart-cache.js public/smart-cache.js
+   cp node_modules/smartcache-serviceworker/dist/sw.js public/sw.js
    ```
 
 3. **Update `public/index.html`**
@@ -298,7 +298,7 @@ For an Angular application created with Angular CLI, you must manually inject Sm
 
 1. **Install SmartCache**
    ```bash
-   npm install smartcache --save
+   npm install smartcache-serviceworker --save
    ```
 
 2. **Copy `sw.js` and `smart-cache.js` to `src/`**
@@ -308,8 +308,8 @@ For an Angular application created with Angular CLI, you must manually inject Sm
    │   ├── assets/
    │   ├── index.html
    │   ├── main.ts
-   │   ├── smart-cache.js  ← node_modules/smartcache/dist
-   │   └── sw.js           ← node_modules/smartcache/dist
+   │   ├── smart-cache.js  ← node_modules/smartcache-serviceworker/dist
+   │   └── sw.js           ← node_modules/smartcache-serviceworker/dist
    └── angular.json
    ```
 
@@ -381,7 +381,7 @@ For a Vue.js application created with Vue CLI:
 
 1. **Install SmartCache**
    ```bash
-   npm install smartcache --save
+   npm install smartcache-serviceworker --save
    ```
 
 2. **Copy `sw.js` and `smart-cache.js` to `public/`**
@@ -389,8 +389,8 @@ For a Vue.js application created with Vue CLI:
    your-vue-app/
    ├── public/
    │   ├── index.html
-   │   ├── smart-cache.js  ← node_modules/smartcache/dist
-   │   └── sw.js           ← node_modules/smartcache/dist
+   │   ├── smart-cache.js  ← node_modules/smartcache-serviceworker/dist
+   │   └── sw.js           ← node_modules/smartcache-serviceworker/dist
    └── src/
        └── ...
    ```
@@ -444,15 +444,15 @@ For a Nuxt.js application:
 
 1. **Install SmartCache**
    ```bash
-   npm install smartcache --save
+   npm install smartcache-serviceworker --save
    ```
 
 2. **Copy `sw.js` and `smart-cache.js` to `static/`**
    ```
    your-nuxt-app/
    ├── static/
-   │   ├── smart-cache.js  ← node_modules/smartcache/dist
-   │   └── sw.js           ← node_modules/smartcache/dist
+   │   ├── smart-cache.js  ← node_modules/smartcache-serviceworker/dist
+   │   └── sw.js           ← node_modules/smartcache-serviceworker/dist
    └── nuxt.config.js
    ```
 

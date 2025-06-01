@@ -1,5 +1,5 @@
 {
-  "name": "smartcache",
+  "name": "smartcache-serviceworker",
   "version": "1.0.0",
   "description": "A lightweight Service Worker library for automatic caching (GET/HEAD) and offline request queue (POST, PUT, DELETE) via IndexedDB.",
   "author": "Ido Aizenshtein <idoaizenshtein@gmail.com>",
